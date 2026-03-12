@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DBstyle.css">
+    <link rel="stylesheet" href="portstyles.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="top-bar">
+        <div class="home-button">
+            <a href="portfolio-homepage.html">Home</a>
+        </div>
+        <div class="achivments-button">
+            <a href="portfolio-achivments.html">Projects</a>
+        </div>
+        <div class="resume-button">
+            <a href="portfolio-resume.html">Resume </a>
+        </div>
+        <div class="life-style">
+            <a href="portfolio-lifestyle.html"> Life-Style</a>
+        </div>
+    </section>
+    <div class="container">
+        <h2> My Digital Library</h3>
+        <div class="input-section">
+            <!--create a digital bookshelf that can put the book titles in a list-->
+            <textarea name="" id="inputText" cols="30" rows="1"></textarea>
+            <button id="addBook">Add Book to front</button>
+            <button id="addBook2"> Add Book to Back</button>
+        </div>
+        <div id="removebooks">
+            <button id="removebookfront">remove the first Book</button>
+            <button id="removebookback">remove the last Book</button>
+        </div>
+        <div class="book-list">
+            <h2>My Book List</h2>
+            <ul id="bookList"></ul>
+        </div>
+    </div>
+</body>
+<script src="DBscript.js"></script>
+</html>

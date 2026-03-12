@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portstyles.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <body id="achiv-body">
+    <section id="top-bar">
+        <div class="home-button">
+            <a href="portfolio-homepage.html">Home</a>
+        </div>
+        <div class="achivments-button">
+            <a href="portfolio-achivments.html">Projects</a>
+        </div>
+        <div class="resume-button">
+            <a href="portfolio-resume.html">Resume </a>
+        </div>
+        <div class="life-style">
+            <a href="portfolio-lifestyle.html"> Life-Style</a>
+        </div>
+    </section>
+    <div id="container">
+        <h3>monthly budget planner</h3>
+        <div class="box">
+                <h3> monthly income</h3>
+                <input type="number" id="salaryInput" placeholder="salary"/>
+               <button onclick="addSalary()">Add Salary</button>
+                <div class="input-group">
+            <h3> monthly expenses</h3>
+            <input type="number" id="rentInput" placeholder="rent"/>
+            <button onclick="addRent()">Add Rent</button>
+            <br />
+            <input type="number" id="uttilInput" placeholder="utilities"/>
+            <button onclick="addUtilities()">Add Utilities</button>
+        </div>
+
+        </div>
+        
+        <div class="summary">
+            <h3> monthly summary</h3>
+            <p>Total Income: $<span id="totalIncome">0</span></p>
+            <p>Total Expenses: $<span id="totalExpenses">0</span></p>
+            <p>Rent: $<span id="rentExpense">0</span></p>
+        </div>
+        <div class="summary">
+            <h3> annual summary</h3>
+            <p>Total Income: $<span id="annualIncome">0</span></p>
+            <p>Total Expenses: $<span id="annualExpenses">0</span></p>
+            <p>Annual Rent: $<span id="annualRent">0</span></p>
+        </div>
+       
+
+    </div>
+</body>
+</html>

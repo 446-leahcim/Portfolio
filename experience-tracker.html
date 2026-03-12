@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portstyles.css">
+    <style>
+        #container{
+    width: 400px;
+    height: fit-content;
+    border: 2px solid black;
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+#table1{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
+th{
+    border: 1px solid black;
+}
+    </style>
+    <title>expence tracker</title>
+</head>
+<body>
+     <section id="top-bar">
+        <div class="home-button">
+            <a href="portfolio-homepage.html">Home</a>
+        </div>
+        <div class="achivments-button">
+            <a href="portfolio-achivments.html">Projects</a>
+        </div>
+        <div class="resume-button">
+            <a href="portfolio-resume.html">Resume </a>
+        </div>
+        <div class="life-style">
+            <a href="portfolio-lifestyle.html"> Life-Style</a>
+        </div>
+    </section>
+    <div id="container">
+        <h1>Expense Tracker</h1>
+        <input id="expenceName"></input>
+        <input id="ExpenseAmount"></input>
+        <select id="catagory">
+             <option value="">Select a Category</option>
+            <option value="food">Food</option>
+            <option value="transport">Transport</option>
+            <option value="entertainment">Entertainment</option>
+        </select>
+        <button id="addExpence">Add Expense</button>
+        <table id="table1">
+            <tr>
+                <th>expence Name</th>
+                <th>amount</th>
+                <th>catagory</th>
+                <th>Action</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    document.getElementById('addExpence').addEventListener('click', function() {
+    const name = document.getElementById('expenceName').value.trim();
+    const amount = document.getElementById('ExpenseAmount').value.trim();
+    const category = document.getElementById('catagory').value;
+    if (name && amount && category) {
+        const table = document.getElementById('table1');
+        const row = table.insertRow(-1);
+        row.insertCell(0).innerText = name;
+        row.insertCell(1).innerText = amount;
+        row.insertCell(2).innerText = category;
+        // Action cell (optional: add a delete button)
+        const actionCell = row.insertCell(3);
+        const delBtn = document.createElement('button');
+        delBtn.innerText = 'Delete';
+        delBtn.onclick = function() {
+            table.deleteRow(row.rowIndex);
+        };
+        actionCell.appendChild(delBtn);
+        // Clear inputs
+        document.getElementById('expenceName').value = '';
+        document.getElementById('ExpenseAmount').value = '';
+        document.getElementById('catagory').value = '';
+    } else {
+        alert('Please fill in all fields.');
+    }
+});
+</script>
+</html>

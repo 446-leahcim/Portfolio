@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portstyles.css">
+    <title>Document</title>
+    <style>
+.container {
+    width: 300px;
+    height: fit-content;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flexbox;
+    flex-wrap: wrap;
+}
+    </style>
+</head>
+<body>
+    <section id="top-bar">
+        <div class="home-button">
+            <a href="portfolio-homepage.html">Home</a>
+        </div>
+        <div class="achivments-button">
+            <a href="portfolio-achivments.html">Projects</a>
+        </div>
+        <div class="resume-button">
+            <a href="portfolio-resume.html">Resume </a>
+        </div>
+        <div class="life-style">
+            <a href="portfolio-lifestyle.html"> Contact Info</a>
+        </div>
+    </section>
+    <div class="container">
+        <textarea name="" id="inputText" cols="30" rows="1"></textarea>
+        <button id="uppercase">Uppercase</button>
+        <button id="lowercase">Lowercase</button>
+        <button id="capitalize">Capitalize Each Word</button>
+        <button id="removeSpaces">Remove Extra Spaces</button>
+        <button id="replace">Replace Word</button>
+        <div id="output" style="margin-top:10px;"></div>
+        <div id="charCount" style="margin-top:5px;"></div>
+    </div>
+</body>
+<script>
+    const container = document.querySelector('.container');
+let outputDiv = document.getElementById('output');
+if (!outputDiv) {
+    outputDiv = document.createElement('div');
+    outputDiv.id = 'output';
+    outputDiv.style.marginTop = '10px';
+    container.appendChild(outputDiv);
+}
+
+// Helper to get textarea value
+function getInputText() {
+    return document.getElementById('inputText').value;
+}
+
+// Function 1: Convert Text to Uppercase
+function convertToUppercase() {
+    const text = getInputText();
+    outputDiv.innerText = text.toUpperCase();
+    countCharacters();
+}
+
+// Function 2: Convert Text to Lowercase
+function convertToLowercase() {
+    const text = getInputText();
+    outputDiv.innerText = text.toLowerCase();
+    countCharacters();
+}
+
+// Function 3: Capitalize Each Word
+function capitalizeEachWord() {
+    const text = getInputText();
+    const words = text.split(' ');
+    const capitalized = words.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+    outputDiv.innerText = capitalized;
+    countCharacters();
+}
+
+// Function 4: Remove Extra Spaces
+function removeExtraSpaces() {
+    const text = getInputText();
+    const cleaned = text.trim().replace(/\s+/g, ' ');
+    outputDiv.innerText = cleaned;
+    countCharacters();
+}
+
+// Function 5: Replace a Word
+function replaceWord() {
+    const text = getInputText();
+    const wordToReplace = prompt('Enter the word to replace:');
+    const replacementWord = prompt('Enter the replacement word:');
+    const replaced = text.replaceAll(wordToReplace, replacementWord);
+    outputDiv.innerText = replaced;
+    countCharacters();
+}
+
+// Function 6: Count Characters
+function countCharacters() {
+    let chars = outputDiv.innerText.length;
+    let charCountDiv = document.getElementById('charCount');
+    if (!charCountDiv) {
+        charCountDiv = document.createElement('div');
+        charCountDiv.id = 'charCount';
+        charCountDiv.style.marginTop = '5px';
+        container.appendChild(charCountDiv);
+    }
+    charCountDiv.innerText = 'Character count: ' + chars;
+}
+
+// Add buttons for all functions
+function addButton(id, text, handler) {
+    let btn = document.getElementById(id);
+    if (!btn) {
+        btn = document.createElement('button');
+        btn.id = id;
+        btn.innerText = text;
+        container.appendChild(btn);
+    }
+    btn.onclick = handler;
+}
+
+addButton('uppercase', 'Uppercase', convertToUppercase);
+addButton('lowercase', 'Lowercase', convertToLowercase);
+addButton('capitalize', 'Capitalize Each Word', capitalizeEachWord);
+addButton('removeSpaces', 'Remove Extra Spaces', removeExtraSpaces);
+addButton('replace', 'Replace Word', replaceWord);
+</script>
+</html>

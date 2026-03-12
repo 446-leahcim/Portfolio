@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    /* padding: 10px; */
+    
+}
+/* home body  */
+body{
+    /* display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 100px); */
+    /* background:linear-gradient(to right, blue, rgb(51, 0, 128)) */
+    background-image: url(images/dungeons-dragons-curse-of-strahd-podzemelia-i-drakony-nastol.jpg);
+    background-size: cover;
+}
+a:link{
+    font-size: large;
+    color: azure;
+}
+a:visited{
+    font-size: large;
+    color: aliceblue;
+}
+p{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#top-bar{
+    display: flex;
+
+}
+/*top bar uni*/
+.home-button{
+    background-color: rgba(33, 33, 33, .75);
+    color: azure;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    border: 1px solid black;
+    font-family:cursive;
+}
+.achivments-button{
+    background-color: rgba(33, 33, 33, .75);
+    color: azure;
+    display: flex;
+    
+    align-items: center;
+     justify-content: center;
+    flex-grow: 1;
+    border: 1px solid black;
+    font-family:cursive;
+}
+.resume-button{
+    background-color: rgba(33, 33, 33, .75);
+    color: azure;
+    display: flex;
+    flex-grow: 1;
+   
+    align-items: center;
+     justify-content: center;
+    border: 1px solid black;
+    font-family:cursive;
+}
+.life-style{
+    background-color: rgba(33, 33, 33, .75);
+    color: azure;
+    display: flex;
+    flex-grow: 1;
+   
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-family:cursive;
+}
+/*home body*/
+ .words{
+ background-color: rgba(256, 256, 256, .60);
+   border-radius: 5px;
+    padding: 5px;
+    width: 500px;
+ }
+.bodying{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: start;
+    padding: 0 100px;
+    float: center;
+    overflow: auto;
+    margin-top: 50px;
+}
+#me-cat{
+    /* width: 100%; */
+    width: 300px;
+    /* height: 100%; */
+    float: left;
+
+}
+/* achivments body page */
+#achiv-body{
+    font-size: 10px;
+}
+#whatmedone{
+    background-color: rgba(256, 256, 256, .60);
+    overflow: auto;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    width: 500px;
+    height: fit-content;
+    overflow: auto;
+    /* justify-content: center;
+    align-self: center; */
+    justify-self: center;
+    /* align-content: center; */
+}
+/*resume*/
+#res-body{
+    font-size: 10px;
+}
+#resume-res{
+    width: 750px;
+    height:fit-content;
+    background-color: rgba(256, 256, 256, .60);
+    justify-content: center;
+    align-content: center;
+    font-size: medium;
+    justify-self: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+/*life-style webpage*/
+#life-body{
+    font-size: 10px;
+}
+
+#container1{
+    margin: 5px;
+    padding: 5px;
+    width:fit-content;
+    height: fit-content;
+    background-color: rgba(206, 206, 206, .60);
+    border: 2px solid black;
+}
+#container{
+    margin: 10px;
+    padding: 20px;
+    width: 1000px;
+    height: fit-content;
+    background-color: rgb(47, 79, 60);
+    color: azure;
+    border: 2px solid black;
+}
+.box{
+    width: 500px;
+    height: fit-content;
+    background-color: coral;
+    border: 2px solid black;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    /* line-height: 100px; */
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+}
