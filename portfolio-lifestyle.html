@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" type="text/css" href="portstyles.css" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
     <title>Contact Info</title>
-    <style>
-        #contact{
-            width:500px;
-            height:300px;
-            background-color: white;
-        }
-    </style>
 </head>
 <body id="life-body">
+    <div class="PageId">
+        <h2>Contact Info Page</h2>
+    </div>
    <section id="top-bar">
         <div class="home-button">
             <a href="portfolio-homepage.html">Home</a>
@@ -29,10 +28,22 @@
         </div>
     </section>
 
-    <div id="contact">
-        <h3>Contact me!</h3>
-        <p>Badmj08@gmail.com</p>
-        <p>Id love to hear from you</p>
+    <div id="contactContainer">
+        <h1>Contact me</h1>
+        <h3>I'd love to hear from you</h3>
+        <div id="phone-Email">
+            <h2>message me at #1+ 623-734-3580</h2>
+            <h2>or email me @ badmj08@gmail.com</h2>
+        </div>
+        <form id="directMessage" action="https://formspree.io/f/xwkgwqzv" method="POST">
+            <input type="text" name="name" placeholder="please input your name" required>
+            <input type="email" name="email" placeholder="your email goes here" required>
+            <textarea name="message" placeholder="what do you want to ask" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </div>
+    <script>
+
+    </script>
 </body>
 </html>
